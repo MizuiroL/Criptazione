@@ -1,8 +1,12 @@
 package reti.criptazione;
 
-public class Multiplication implements AlgorithmsFunctions {
+public class Multiply implements AlgorithmsFunctions {
 
 	private int n;
+	
+	public Multiply (int n) {
+		this.n = n;
+	}
 
 	@Override
 	public char function(char a) {

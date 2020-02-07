@@ -1,12 +1,12 @@
 package reti.criptazione;
 
-public class AlgorithmsCompleteIteration implements Algorithms {
+public class AlgorithmCompleteIteration implements Algorithms {
 	
 	private Message M;
 	
 	private AlgorithmsFunctions A;
 	
-	public AlgorithmsCompleteIteration (Message M, AlgorithmsFunctions A) {
+	public AlgorithmCompleteIteration (Message M, AlgorithmsFunctions A) {
 		this.M = M;
 		
 		this.A = A;
