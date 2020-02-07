@@ -1,13 +1,8 @@
 package reti.criptazione;
 
-public class AlgorithmMultComplete extends AlgorithmsCompleteIteration {
-	
-	private int n;
+public class Multiplication implements AlgorithmsFunctions {
 
-	public AlgorithmMultComplete(Message M, int n) {
-		super (M);
-		this.n = n;
-	}
+	private int n;
 
 	@Override
 	public char function(char a) {

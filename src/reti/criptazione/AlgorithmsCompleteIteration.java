@@ -1,11 +1,15 @@
 package reti.criptazione;
 
-public abstract class AlgorithmsCompleteIteration implements Algorithms {
+public class AlgorithmsCompleteIteration implements Algorithms {
 	
 	private Message M;
 	
-	public AlgorithmsCompleteIteration (Message M) {
+	private AlgorithmsFunctions A;
+	
+	public AlgorithmsCompleteIteration (Message M, AlgorithmsFunctions A) {
 		this.M = M;
+		
+		this.A = A;
 	}
 
 	
@@ -19,12 +23,9 @@ public abstract class AlgorithmsCompleteIteration implements Algorithms {
 	public void iteration() {
 	char array[] = new char [4]; //Inserire l'array con i codici Ascii
 		for (int i = 0; i<= array.length; i++) {
-			array[i] = function(array[i]);
+			array[i] = A.function(array[i]);
 		}
 
 	}
-
-@Override	
-	public abstract char function(char a);
 
 }

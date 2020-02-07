@@ -14,10 +14,4 @@ public class AlgotithmEvenIteration implements Algorithms {
 
 	}
 
-	@Override
-	public char function(char a) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
