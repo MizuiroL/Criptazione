@@ -17,7 +17,10 @@ public abstract class AlgorithmsCompleteIteration implements Algorithms {
 	
 @Override
 	public void iteration() {
-		
+	char array[] = new char [4]; //Inserire l'array con i codici Ascii
+		for (int i = 0; i<= array.length; i++) {
+			array[i] = function(array[i]);
+		}
 
 	}
 
