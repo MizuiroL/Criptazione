@@ -3,7 +3,7 @@ package reti.criptazione;
 public class Esecuzione {
 
 	public static void main(String[] args) {
-		char character = 'a';    
+		/*char character = 'a';    
 		int ascii = (int) character;
 		
 		System.out.print(ascii);
@@ -14,7 +14,9 @@ public class Esecuzione {
 		
 		char gigio = (char) ascii;
 		
-		System.out.print(gigio);
+		System.out.print(gigio);*/
+		
+		//Add A = new Add(5);
 
 	}
 
