@@ -6,7 +6,7 @@ public class CrittatoreTemporaneo {
 	public static String firstEncryption(String original, int n) {
 		int[] asciiArray = stringToAscii(original);
 		for (int i=0; i<asciiArray.length; i++) {
-			asciiArray[i] = (asciiArray[i] + n) % 128;
+			asciiArray[i] = (asciiArray[i] + n) % 128; //Gino
 			System.out.println(asciiArray[i]);
 		}
 		return asciiToString(asciiArray);

@@ -22,6 +22,6 @@ public abstract class AlgorithmsCompleteIteration implements Algorithms {
 	}
 
 @Override	
-	public abstract char function();
+	public abstract char function(char a);
 
 }

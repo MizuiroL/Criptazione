@@ -4,11 +4,16 @@ import java.util.List;
 
 public class Message {
 	
-	private String message;
+	private String original;
 	
-	private List<Integer> arrayAscii;
+	private List<Integer> message;
 
-	public String getMessage() {
+	public String getOriginal() {
+		return original;
+	}
+	
+	public List<Integer> getMessage(){
 		return message;
 	}
+	
 }

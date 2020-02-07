@@ -6,6 +6,6 @@ public interface Algorithms {
 	
 	public void iteration();
 	
-	public char function();
+	public char function( char a);
 
 }
