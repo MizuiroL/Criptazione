@@ -1,7 +1,7 @@
 package reti.criptazione;
 
 import java.util.Random;
-// Modificaaa
+
 public class CrittatoreTemporaneo {
 	public static String firstEncryption(String original, int n) {
 		int[] asciiArray = stringToAscii(original);
