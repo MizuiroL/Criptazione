@@ -3,17 +3,21 @@ package reti.criptazione;
 import java.util.List;
 
 public class Message {
-	
-	private String original;
-	
-	private List<Integer> message;
 
-	public String getOriginal() {
-		return original;
-	}
-	
-	public List<Integer> getMessage(){
+	private String message;
+
+	private List<Integer> listMessage;
+
+	public String getMessage() {
 		return message;
 	}
-	
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public List<Integer> getListMessage() {
+		return listMessage;
+	}
+
 }

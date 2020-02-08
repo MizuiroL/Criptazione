@@ -10,11 +10,13 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.ButtonGroup;
+import javax.swing.JTextField;
 
 public class Scheda_Algoritmi {
 
 	private JFrame frmSelectAlgorithm;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -51,7 +53,7 @@ public class Scheda_Algoritmi {
 		
 		Panel panel = new Panel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(10, 58, 189, 285);
+		panel.setBounds(10, 98, 189, 285);
 		frmSelectAlgorithm.getContentPane().add(panel);
 		
 		JLabel lblSelectIterationPolicy = new JLabel("SELECT ITERATION POLICY");
@@ -94,7 +96,7 @@ public class Scheda_Algoritmi {
 		
 		Panel panel_2 = new Panel();
 		panel_2.setBackground(Color.WHITE);
-		panel_2.setBounds(311, 58, 189, 285);
+		panel_2.setBounds(311, 98, 189, 285);
 		frmSelectAlgorithm.getContentPane().add(panel_2);
 		
 		JLabel lblSelectModificationPolicy = new JLabel("SELECT MODIFICATION POLICY");
@@ -121,5 +123,15 @@ public class Scheda_Algoritmi {
 		
 		JRadioButton rdbtnSubtraction = new JRadioButton("SUBTRACTION");
 		panel_2.add(rdbtnSubtraction);
+		
+		textField = new JTextField();
+		textField.setBounds(197, 58, 100, 20);
+		frmSelectAlgorithm.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblSelectTheNumber = new JLabel("Select the number to operate on:");
+		lblSelectTheNumber.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 14));
+		lblSelectTheNumber.setBounds(10, 58, 189, 20);
+		frmSelectAlgorithm.getContentPane().add(lblSelectTheNumber);
 	}
 }

@@ -9,19 +9,26 @@ import java.awt.Color;
 import java.awt.Label;
 import java.awt.Font;
 import java.awt.Button;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Insert_Message {
+public class InsertMessage {
+	
+	private String message;
+	
+	private TextArea textArea;
 
 	private JFrame frmInsertMessage;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	
+	public static void open() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Insert_Message window = new Insert_Message();
+					InsertMessage window = new InsertMessage();
 					window.frmInsertMessage.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +40,7 @@ public class Insert_Message {
 	/**
 	 * Create the application.
 	 */
-	public Insert_Message() {
+	public InsertMessage() {
 		initialize();
 	}
 
@@ -47,7 +54,7 @@ public class Insert_Message {
 		frmInsertMessage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmInsertMessage.getContentPane().setLayout(null);
 		
-		TextArea textArea = new TextArea();
+		textArea = new TextArea();
 		textArea.setBounds(107, 123, 539, 351);
 		frmInsertMessage.getContentPane().add(textArea);
 		
@@ -63,9 +70,22 @@ public class Insert_Message {
 		panel.add(label);
 		
 		Button button = new Button("CONFIRM");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				message = textArea.getText();
+				
+				frmInsertMessage.setVisible(false);
+				
+			}
+		});
 		button.setBackground(Color.GRAY);
 		button.setFont(new Font("Castellar", Font.BOLD, 14));
 		button.setBounds(297, 480, 200, 31);
 		frmInsertMessage.getContentPane().add(button);
+	}
+	
+	public String getMessage() {
+		return message;
 	}
 }
