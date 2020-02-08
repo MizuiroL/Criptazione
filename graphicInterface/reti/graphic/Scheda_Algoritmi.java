@@ -13,7 +13,7 @@ import javax.swing.ButtonGroup;
 
 public class Scheda_Algoritmi {
 
-	private JFrame frame;
+	private JFrame frmSelectAlgorithm;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
@@ -24,7 +24,7 @@ public class Scheda_Algoritmi {
 			public void run() {
 				try {
 					Scheda_Algoritmi window = new Scheda_Algoritmi();
-					window.frame.setVisible(true);
+					window.frmSelectAlgorithm.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,15 +43,16 @@ public class Scheda_Algoritmi {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 526, 392);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmSelectAlgorithm = new JFrame();
+		frmSelectAlgorithm.setTitle("Select Algorithm");
+		frmSelectAlgorithm.setBounds(100, 100, 526, 432);
+		frmSelectAlgorithm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmSelectAlgorithm.getContentPane().setLayout(null);
 		
 		Panel panel = new Panel();
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(10, 58, 189, 285);
-		frame.getContentPane().add(panel);
+		frmSelectAlgorithm.getContentPane().add(panel);
 		
 		JLabel lblSelectIterationPolicy = new JLabel("SELECT ITERATION POLICY");
 		lblSelectIterationPolicy.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -84,7 +85,7 @@ public class Scheda_Algoritmi {
 		Panel panel_1 = new Panel();
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(124, 10, 315, 38);
-		frame.getContentPane().add(panel_1);
+		frmSelectAlgorithm.getContentPane().add(panel_1);
 		
 		JLabel lblSelectYourAlgorithm = new JLabel("SELECT THE PARAMETERS OF YOUR ALGORITHM");
 		lblSelectYourAlgorithm.setFont(new Font("Tahoma", Font.BOLD, 12));
@@ -94,7 +95,7 @@ public class Scheda_Algoritmi {
 		Panel panel_2 = new Panel();
 		panel_2.setBackground(Color.WHITE);
 		panel_2.setBounds(311, 58, 189, 285);
-		frame.getContentPane().add(panel_2);
+		frmSelectAlgorithm.getContentPane().add(panel_2);
 		
 		JLabel lblSelectModificationPolicy = new JLabel("SELECT MODIFICATION POLICY");
 		lblSelectModificationPolicy.setForeground(Color.RED);
