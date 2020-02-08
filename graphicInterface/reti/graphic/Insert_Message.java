@@ -9,7 +9,6 @@ import java.awt.Color;
 import java.awt.Label;
 import java.awt.Font;
 import java.awt.Button;
-import javax.swing.UIManager;
 
 public class Insert_Message {
 
@@ -64,6 +63,7 @@ public class Insert_Message {
 		panel.add(label);
 		
 		Button button = new Button("CONFIRM");
+		button.setBackground(Color.GRAY);
 		button.setFont(new Font("Castellar", Font.BOLD, 14));
 		button.setBounds(297, 480, 200, 31);
 		frmInsertMessage.getContentPane().add(button);
