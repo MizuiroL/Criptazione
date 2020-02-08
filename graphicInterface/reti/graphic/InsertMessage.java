@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import reti.structure.*;
-
 import java.awt.TextArea;
 import java.awt.Panel;
 import java.awt.Color;
@@ -24,7 +23,7 @@ public class InsertMessage {
 	private StringController s = new StringController();
 
 	
-	public static void open() {
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -68,6 +67,8 @@ public class InsertMessage {
 		label.setFont(new Font("Arial Nova Cond", Font.BOLD, 20));
 		label.setAlignment(Label.CENTER);
 		panel.add(label);
+		
+	
 		
 		Button button = new Button("CONFIRM");
 		button.addActionListener(new ActionListener() {
