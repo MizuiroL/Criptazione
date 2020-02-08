@@ -3,6 +3,9 @@ package reti.graphic;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
+import reti.structure.*;
+
 import java.awt.TextArea;
 import java.awt.Panel;
 import java.awt.Color;
@@ -14,15 +17,12 @@ import java.awt.event.ActionEvent;
 
 public class InsertMessage {
 	
-	private String message;
-	
 	private TextArea textArea;
 
 	private JFrame frmInsertMessage;
+	
+	private StringController s = new StringController();
 
-	/**
-	 * Launch the application.
-	 */
 	
 	public static void open() {
 		EventQueue.invokeLater(new Runnable() {
@@ -73,9 +73,9 @@ public class InsertMessage {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				message = textArea.getText();
-				
+				s.update(textArea.getText());
 				frmInsertMessage.setVisible(false);
+				
 				
 			}
 		});
@@ -85,7 +85,4 @@ public class InsertMessage {
 		frmInsertMessage.getContentPane().add(button);
 	}
 	
-	public String getMessage() {
-		return message;
-	}
 }

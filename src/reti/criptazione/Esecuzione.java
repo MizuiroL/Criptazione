@@ -1,29 +1,25 @@
 package reti.criptazione;
 
-import reti.graphic.InsertMessage;
+import java.util.Scanner;
+
+
 
 public class Esecuzione {
 
+	//private Structure str = Structure.generateStructure();
+	
+	private static Scanner scan;
+
 	public static void main(String[] args) {
-		/*char character = 'a';    
-		int ascii = (int) character;
 		
-		System.out.print(ascii);
-		
-		System.out.print('\n');
-		
-		ascii = ascii + 4;
-		
-		char gigio = (char) ascii;
-		
-		System.out.print(gigio);*/
-		
-		//Add A = new Add(5);
-		
-		Message M = new Message();
-		InsertMessage IM = new InsertMessage();
-		IM.open();
-		
+		//Structure s = Structure.generateStructure();
+	    System.out.print("Inserisci il messaggio da criptare:");
+	    scan = new Scanner(System.in);
+	    String in = scan.nextLine();
+	    Message M = new Message();
+	    M.setMessage(in);
+	    System.out.print(M.getMessage());
 	}
 
+	
 }
