@@ -34,7 +34,6 @@ public class Esecuzione {
 
 public void selectIteration() {
 	System.out.println("Select the iteration to apply to the message (select info for more information):");
-	//String li = scan.nextLine();
 	String li = scan.nextLine();
 	if (li.equalsIgnoreCase("Complete")){
 		A = new AlgorithmCompleteIteration(M, function);
