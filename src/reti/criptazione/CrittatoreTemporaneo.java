@@ -1,13 +1,12 @@
 package reti.criptazione;
 
 import java.util.Random;
-// Modifica
+
 public class CrittatoreTemporaneo {
 	public static String firstEncryption(String original, int n) {
 		int[] asciiArray = stringToAscii(original);
-		for (int i=0; i<asciiArray.length; i++) {
-			asciiArray[i] = (asciiArray[i] + n) % 128; //Gino
-			System.out.println(asciiArray[i]);
+		for (int i = 0; i < asciiArray.length; i++) {
+			asciiArray[i] = (asciiArray[i] + n) % 128;
 		}
 		return asciiToString(asciiArray);
 	}
@@ -19,10 +18,10 @@ public class CrittatoreTemporaneo {
 		}
 		return asciiArray;
 	}
-	
+
 	public static String asciiToString(int[] array) {
 		String result = "";
-		for(int i = 0; i<array.length; i++) {
+		for (int i = 0; i < array.length; i++) {
 			result += (char) array[i];
 		}
 		return result;
@@ -31,10 +30,10 @@ public class CrittatoreTemporaneo {
 	public static int generateKey() {
 		return new Random().nextInt();
 	}
-	
+
 	public static void printArray(int[] array) {
-		for(int i : array) {
-			System.out.print(" "+i);
+		for (int i : array) {
+			System.out.print(" " + i);
 		}
 		System.out.println();
 	}

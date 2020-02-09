@@ -2,16 +2,12 @@ package reti.criptazione;
 
 import java.util.Scanner;
 
-
-
 public class Esecuzione {
 
 	//private Structure str = Structure.generateStructure();
-	
 	private static Scanner scan;
 
 	public static void main(String[] args) {
-		
 		//Structure s = Structure.generateStructure();
 	    System.out.println("Inserisci il messaggio da criptare:");
 	    scan = new Scanner(System.in);
@@ -24,5 +20,4 @@ public class Esecuzione {
 	    System.out.print(M.getListMessage());
 	}
 
-	
 }
