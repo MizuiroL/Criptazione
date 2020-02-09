@@ -20,27 +20,29 @@ public class Esecuzione {
 
 	public void start() {
 
-		System.out.println("Inserisci il messaggio da criptare:");
+		System.out.println("Enter the message to be encrypted:");
 		scan = new Scanner(System.in);
 		String in = scan.nextLine();
 		M.setMessage(in);
 		selectFunction();
 		selectIteration();
 		A.iteration();
+		System.out.println("The decrypted message is:");
 		System.out.print(M.getListMessage());
 
 	}
 
 public void selectIteration() {
 	System.out.println("Select the iteration to apply to the message (select info for more information):");
-	String in = scan.nextLine();
-	if (in.equalsIgnoreCase("Complete")){
+	//String li = scan.nextLine();
+	String li = scan.nextLine();
+	if (li.equalsIgnoreCase("Complete")){
 		A = new AlgorithmCompleteIteration(M, function);
-	}else if(in.equalsIgnoreCase("Even")) {
+	}else if(li.equalsIgnoreCase("Even")) {
 		A = new AlgorithmEvenIteration(M, function);
-	}else if (in.equalsIgnoreCase("Odd")) {
+	}else if (li.equalsIgnoreCase("Odd")) {
 		A = new AlgorithmOddIteration(M, function);
-	}else if (in.equalsIgnoreCase("info")) {
+	}else if (li.equalsIgnoreCase("info")) {
 		infoIteration();
 	}else {
 		System.out.println("The iteration you have entered is not present in the encryption system.");
