@@ -13,12 +13,15 @@ public class Esecuzione {
 	public static void main(String[] args) {
 		
 		//Structure s = Structure.generateStructure();
-	    System.out.print("Inserisci il messaggio da criptare:");
+	    System.out.println("Inserisci il messaggio da criptare:");
 	    scan = new Scanner(System.in);
 	    String in = scan.nextLine();
 	    Message M = new Message();
 	    M.setMessage(in);
-	    System.out.print(M.getMessage());
+	    AlgorithmsFunctions add = new Add(4);
+	    Algorithms A = new AlgotithmEvenIteration(M, add);
+	    A.iteration();
+	    System.out.print(M.getListMessage());
 	}
 
 	

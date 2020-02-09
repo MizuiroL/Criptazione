@@ -1,12 +1,10 @@
 package reti.criptazione;
 
-import java.util.List;
-
 public class Message {
 
 	private String message;
 
-	private List<Integer> listMessage;
+	private char[] listMessage;
 
 	public String getMessage() {
 		return message;
@@ -16,8 +14,15 @@ public class Message {
 		this.message = message;
 	}
 
-	public List<Integer> getListMessage() {
+	public char[] getListMessage() {
 		return listMessage;
+	}
+	
+	public void stringToAscii() {
+		listMessage = new char[message.length()];
+		for (int i = 0; i < message.length(); i++) {
+			listMessage[i] = message.charAt(i);
+		}
 	}
 
 }
