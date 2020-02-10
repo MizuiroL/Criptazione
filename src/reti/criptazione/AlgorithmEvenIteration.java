@@ -1,28 +1,21 @@
 package reti.criptazione;
 
-public class AlgorithmEvenIteration implements Algorithms {
+public class AlgorithmEvenIteration extends AlgorithmsWithFunction {
 
-	private Message M;
+	// Extends the abstract class AlgoritmsWithFunction
 
-	private AlgorithmsFunctions A;
-
-	public AlgorithmEvenIteration(Message M, AlgorithmsFunctions A) {
-		this.M = M;
-
-		this.A = A;
-	}
-
-	@Override
-	public Message getMessage() {
-
-		return M;
+	public AlgorithmEvenIteration(Message M, AlgorithmsFunctions funct) {
+		// Class constructor
+		super(M, funct); // Invokes the constructor of the extended abstract class
 	}
 
 	@Override
 	public void iteration() {
-		M.stringToAscii();
+		Message M = super.getMessage(); // Invokes the methods of the super class
+		M.stringToAscii(); // Invokes the Message class method to get the char array
 		for (int i = 1; i < M.getListMessage().length; i = i + 2) {
-			M.getListMessage()[i] = A.function(M.getListMessage()[i]);
+			M.getListMessage()[i] = super.getFunct().function(M.getListMessage()[i]); // Apply the function to char in
+																						// even positions
 		}
 
 	}

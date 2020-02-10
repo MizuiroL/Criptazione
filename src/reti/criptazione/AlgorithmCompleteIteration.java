@@ -1,29 +1,20 @@
 package reti.criptazione;
 
-public class AlgorithmCompleteIteration implements Algorithms {
+public class AlgorithmCompleteIteration extends AlgorithmsWithFunction {
 
-	private Message M;
+	// Extends the abstract class AlgoritmsWithFunction
 
-	private AlgorithmsFunctions A;
-
-	public AlgorithmCompleteIteration(Message M, AlgorithmsFunctions A) {
-		this.M = M;
-
-		this.A = A;
-	}
-
-	@Override
-	public Message getMessage() {
-
-		return M;
+	public AlgorithmCompleteIteration(Message M, AlgorithmsFunctions funct) {
+		// Class constructor
+		super(M, funct); // Invokes the constructor of the extended abstract class
 	}
 
 	@Override
 	public void iteration() {
-
-		M.stringToAscii();
+		Message M = super.getMessage(); // Invokes the methods of the super class
+		M.stringToAscii(); // Invokes the Message class method to get the char array
 		for (int i = 0; i < M.getListMessage().length; i++) {
-			M.getListMessage()[i] = A.function(M.getListMessage()[i]);
+			M.getListMessage()[i] = super.getFunct().function(M.getListMessage()[i]); // Apply the function to each char
 
 		}
 

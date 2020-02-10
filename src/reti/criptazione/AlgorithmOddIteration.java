@@ -1,30 +1,21 @@
 package reti.criptazione;
 
-public class AlgorithmOddIteration implements Algorithms {
+public class AlgorithmOddIteration extends AlgorithmsWithFunction {
 
-	private Message M;
+	// Extends the abstract class AlgoritmsWithFunction
 
-	private AlgorithmsFunctions A;
-
-	public AlgorithmOddIteration(Message M, AlgorithmsFunctions A) {
-		this.M = M;
-
-		this.A = A;
-	}
-
-	@Override
-	public Message getMessage() {
-
-		return M;
+	public AlgorithmOddIteration(Message M, AlgorithmsFunctions funct) {
+		// Class constructor
+		super(M, funct); // Invokes the constructor of the extended abstract class
 	}
 
 	@Override
 	public void iteration() {
-	//char array[] = new char [4]; //Inserire l'array con i codici Ascii
-	M.stringToAscii();
-		for (int i = 0; i< M.getListMessage().length; i = i + 2) {
-			M.getListMessage()[i] = A.function(M.getListMessage()[i]);
-
+		Message M = super.getMessage(); // Invokes the methods of the super class
+		M.stringToAscii(); // Invokes the Message class method to get the char array
+		for (int i = 1; i < M.getListMessage().length; i = i + 2) {
+			M.getListMessage()[i] = super.getFunct().function(M.getListMessage()[i]); // Apply the function to char in
+																						// odd positions
 		}
 
 	}
