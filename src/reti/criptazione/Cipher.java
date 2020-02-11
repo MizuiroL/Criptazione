@@ -25,7 +25,7 @@ public class Cipher {
 
 		} else {
 			System.out.println("The key is incorrect!");
-			password(); // Allows the user to make other attempts without having to rerun de program
+			password(); // Allows the user to make other attempts without having to rerun the program
 
 		}
 	}
@@ -48,7 +48,7 @@ public class Cipher {
 		String in = scan.nextLine(); // Get user input
 		// Series of "if" that allows the user to select the algorithm
 		if (in.equalsIgnoreCase("encrypt")) {
-			function = new Add(); // Create the object that allows to apply the cryption function
+			function = new Add(); // Create the object that allows to apply the encryption function
 		} else if (in.equalsIgnoreCase("decrypt")) {
 			function = new AddDecrypt(); // Create the object that allows to apply the decryption function
 		} else {
