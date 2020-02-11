@@ -10,7 +10,7 @@ public class VigenereTemporaneo {
 	private static String vigenereEncryption(String plaintext, String keyword) {
 		String cryptedtext = "";
 		for (int i = 0; i < plaintext.length(); i++) {
-			cryptedtext += (char) (((int) plaintext.charAt(i) + (int) keyword.charAt(i % keyword.length())) % 26 + 'A');
+			cryptedtext += (char) ((plaintext.charAt(i) + keyword.charAt(i % keyword.length())) % 26 + 'A');
 		}
 		return cryptedtext;
 	}
